@@ -2,8 +2,8 @@ package testing;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import Phases.VotingPhase;
-import ar1.Candidato;
+import common.Candidato;
+import phases.VotingPhase;
 
 public class InsertVotingDataTest {	
 	

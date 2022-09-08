@@ -2,11 +2,10 @@ package testing;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import Phases.BallotPhase;
-import Phases.ElectorPhase;
-import Phases.VotingPhase;
-import ar1.SessionData;
-import ar1.Voto;
+import common.Voto;
+import phases.BallotPhase;
+import phases.ElectorPhase;
+import phases.VotingPhase;
 
 public class BallotingTest {
 
