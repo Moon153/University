@@ -1,7 +1,7 @@
 package controllers;
 
-import common.Controller;
-import common.Session;
+import commons.Controller;
+import commons.Session;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

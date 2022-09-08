@@ -2,9 +2,9 @@ package phases;
 
 import java.util.ArrayList;
 
-import common.Session;
-import common.SessionPhase;
-import common.Voto;
+import commons.Session;
+import commons.SessionPhase;
+import commons.Voto;
 import interfaces.Observer;
 import users.Elettore;
 

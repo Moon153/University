@@ -1,7 +1,7 @@
 package phases;
 
-import common.SessionData;
-import common.SessionPhase;
+import commons.SessionData;
+import commons.SessionPhase;
 
 public class VotingPhase extends SessionPhase{
 	

@@ -1,4 +1,4 @@
-package common;
+package commons;
 
 public class Candidato {
 	private String nome;

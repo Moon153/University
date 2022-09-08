@@ -1,6 +1,6 @@
 package users;
 
-import common.Session;
+import commons.Session;
 import interfaces.Utente;
 
 public class Scrutatore implements Utente{

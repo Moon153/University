@@ -2,7 +2,7 @@ package testing;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import common.Candidato;
+import commons.Candidato;
 import phases.VotingPhase;
 
 public class InsertVotingDataTest {	

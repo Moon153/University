@@ -1,4 +1,4 @@
-package common;
+package commons;
 
 public class SessionPhase {
 	protected String state = "closed";

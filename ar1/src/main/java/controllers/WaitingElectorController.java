@@ -1,7 +1,7 @@
 package controllers;
 
-import common.Controller;
-import common.Session;
+import commons.Controller;
+import commons.Session;
 import interfaces.Observer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

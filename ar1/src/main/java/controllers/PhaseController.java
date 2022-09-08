@@ -1,6 +1,6 @@
 package controllers;
 
-import common.Controller;
+import commons.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

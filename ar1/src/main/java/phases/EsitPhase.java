@@ -1,6 +1,6 @@
 package phases;
 
-import common.SessionPhase;
+import commons.SessionPhase;
 
 public class EsitPhase extends SessionPhase{
 

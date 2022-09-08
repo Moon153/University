@@ -3,8 +3,8 @@ package controllers;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import common.Controller;
-import common.Voto;
+import commons.Controller;
+import commons.Voto;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

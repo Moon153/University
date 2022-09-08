@@ -2,7 +2,7 @@ package testing;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import common.Voto;
+import commons.Voto;
 import phases.BallotPhase;
 import phases.ElectorPhase;
 import phases.VotingPhase;

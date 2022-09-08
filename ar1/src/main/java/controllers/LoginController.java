@@ -1,8 +1,8 @@
 package controllers;
 
-import common.Controller;
-import common.Session;
-import common.UtenteDaoImpl;
+import commons.Controller;
+import commons.Session;
+import commons.UtenteDaoImpl;
 import interfaces.UtenteDao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

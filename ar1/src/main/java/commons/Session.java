@@ -1,4 +1,4 @@
-package common;
+package commons;
 
 import phases.BallotPhase;
 import phases.ElectorPhase;
