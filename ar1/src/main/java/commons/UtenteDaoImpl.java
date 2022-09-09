@@ -6,7 +6,7 @@ import interfaces.UtenteDao;
 
 public class UtenteDaoImpl implements UtenteDao{
 	
-	private Abilitato abilitati[] = {new Abilitato("RSSMRA43B07L345T", "1234", 15000, "Elettore"), new Abilitato("mario", "1234", 25000, "Scrutatore"), new Abilitato("paolo", "1234", 25000, "Elettore"), new Abilitato("paolo", "1234", 15000, "Scrutatore"), new Abilitato("gigi", "1234", 15000, "Elettore")};
+	private Abilitato abilitati[] = {new Abilitato("RSSMRA43B07L345T", "1234", 15000, "Elettore"), new Abilitato("RFBMRA55L09T634P", "1234", 25000, "Scrutatore"), new Abilitato("GLLPLA94A18D712S", "1234", 25000, "Elettore"), new Abilitato("VRDMNC83D42V283Q", "1234", 15000, "Scrutatore"), new Abilitato("VRDMNC83D42V283Q", "1234", 15000, "Elettore"), new Abilitato("BNCLGU62E25K486R", "1234", 25000, "Elettore")};
 	
 	public boolean verificaUtente(String role, String user, String pass){
 		for(int i=0; i<abilitati.length;i++) {
