@@ -214,7 +214,7 @@ public class SessionData {
 				break;
 			}
 		}
-		voti.add(voto);
+		voti.add(voto);		
 	}
 	
 	public int getNumeroVoti() {

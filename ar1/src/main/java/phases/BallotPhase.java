@@ -45,12 +45,17 @@ public class BallotPhase extends SessionPhase{
 		int voti_vincitore = 0;
 		int[][]listaVoti;
 		if(inizializzato==0) {
-			for(int i=0; i<getNumeroVoti();i++)
+			for(int i=0; i<getNumeroVoti();i++) {
 				if(!getGruppoPartito(i).equals("astenuto"))
-					data.setPartitoCandidato(getCandidati(i), getGruppoPartito(i));	
+					data.setPartitoCandidato(getCandidati(i), getGruppoPartito(i));
+			}
 			inizializzato=1;
 		}
 		listaVoti = getListaVotiCategorico();
+		if(listaVoti == null) {
+			data.setEsito("Non è stata raggiunta una maggioranza.");
+			return;
+		}
 		for(int i = 0; i< listaVoti.length; i++) {
 			if(listaVoti[i][0]> voti_vincitore) {
 				voti_vincitore = listaVoti[i][0];
@@ -108,17 +113,11 @@ public class BallotPhase extends SessionPhase{
 										return;
 									}
 									else {
-										if(voti_vincitore==0)
-											data.setEsito("La maggioranza degli elettori ha votato\nil partito / gruppo: " + data.getPartiesList()[i] + ",\nma non ha raggiunto la maggioranza assoluta dei voti");
-										else
 											data.setEsito("La maggioranza degli elettori ha votato\nil candidato: " + data.getCandidatesList(data.getPartiesList()[i])[j-1] + "\ndel partito / gruppo: " + data.getPartiesList()[i] + ",\nma non ha raggiunto la maggioranza assoluta dei voti");
 										return;
 									}
 								}
 								else {
-									if(voti_vincitore==0)
-										data.setEsito("La maggioranza degli elettori ha votato\nil partito / gruppo: " + data.getPartiesList()[i]);
-									else
 										data.setEsito("La maggioranza degli elettori ha votato\nil candidato: " + data.getCandidatesList(data.getPartiesList()[i])[j-1] + "\ndel partito / gruppo: " + data.getPartiesList()[i]);
 								}
 								return;
