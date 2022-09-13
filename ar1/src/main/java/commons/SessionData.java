@@ -25,6 +25,7 @@ public class SessionData {
 		this.quesito = quesito;
 	}
 
+	//@ ensures n_gruppi_partiti == (old)n_gruppi_partiti + 1 <==> gruppo_o_partito != null and n_candidati_gruppo != 0 and candidato == null and (\forall int i; i < n_gruppi_partiti; candidatiCategorico[i][0] != gruppo_o_partito);
 	public boolean setVotingCategorico(String gruppo_o_partito, int n_candidati_gruppo, String candidato, char genere) {		//matrice bidimensionale per gruppi / partiti e i loro candidati, restituisce se elemento inserito è già presente oppure lo crea
 		if(candidato == null) {		//elemento inserito è partito / gruppo
 			for(int i = 0; i<n_gruppi_partiti; i++)
@@ -135,6 +136,7 @@ public class SessionData {
 		return null;
 	}
 
+	//@ ensures n_gruppi_partiti == (old)n_gruppi_partiti - 1 <==> gruppo_o_partito != null and candidato == null;
 	public void deletePartyCandidateCategorico(String gruppo_o_partito, String candidato) {		//rimozione gruppo / partito o candidato
 		if(candidato== null){
 			for(int i = 0; i<n_gruppi_partiti; i++) {
@@ -163,6 +165,7 @@ public class SessionData {
 		}
 	}
 
+	//@ ensures n_gruppi_partiti == (old)n_gruppi_partiti + 1 <==> (\forall int i; i < n_gruppi_partiti; candidatiOrdinale[i] != elemento);
 	public boolean setVotingOrdinale(String elemento) { 		//array per gruppi / partiti / candidati, restituisce se elemento inserito è già presente oppure lo crea
 		for(int i = 0; i<n_gruppi_partiti; i++)
 			if(candidati_ordinale[i].compareToIgnoreCase(elemento)==0)
@@ -172,6 +175,7 @@ public class SessionData {
 		return true;
 	}
 
+	//@ ensures n_gruppi_partiti == (old)n_gruppi_partiti - 1;
 	public void deletePartyCandidateOrdinale(String elemento) {		//rimozione gruppo / partito o candidato
 		for(int i = 0; i<n_gruppi_partiti; i++) {
 			if(candidati_ordinale[i].compareToIgnoreCase(elemento)==0){
@@ -199,10 +203,12 @@ public class SessionData {
 		return n_elettori;
 	}
 
+	//@ ensures voti.size() == (old)voti.size() + 1;
 	public void addVotoControllo(Voto votoControllo) {	//aggiunge un voto di controllo nel caso di chiusura forzata del sistema
 		voti.add(votoControllo);
 	}
 	
+	//@ ensures voti.size() == (old)voti.size();
 	public void addVoto(Voto voto) {		//rimuove il voto di controllo e aggiunge il voto effettivo
 		for(int i = 0; i<voti.size();i++) {
 			if((quesito.equals(""))&&(voti.get(i).getGruppoPartito()!= null)&&(voti.get(i).getGruppoPartito().equals("astenuto"))){

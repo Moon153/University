@@ -15,6 +15,7 @@ public class BallotPhase extends SessionPhase{
 		setEsitMode(mode);
 	}
 
+	//@ ensures viewEsit() != null;
 	public void performBallot(String votingMode) {
 		switch(getEsitMode()){
 			case "quorum":

@@ -7,6 +7,7 @@ public class Abilitato {
 	private int population;
 	private String role;
 	
+	//@ ensures user != null and pass != null and role != null;
 	public Abilitato(String user, String pass, int population, String role) {
 		this.user = user;
 		this.pass = pass;
